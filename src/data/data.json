@@ -1,0 +1,115 @@
+{
+  "cardInfo": {
+    "maxLimit": 1500,
+    "currentBalance": 17.3,
+    "availableBalance": 1482.7
+  },
+  "dailyPoints": 456000,
+  "transactions": [
+    {
+      "id": 1,
+      "type": "Credit",
+      "amount": 14.06,
+      "name": "Apple",
+      "description": "Pending - Card Number Used",
+      "additionalInfo": "Diana",
+      "date": "2023-10-24",
+      "isPending": true,
+      "authorizedUser": "Diana",
+      "icon": "apple"
+    },
+    {
+      "id": 2,
+      "type": "Payment",
+      "amount": 174.0,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2023-10-23",
+      "isPending": false,
+      "icon": "university"
+    },
+    {
+      "id": 3,
+      "type": "Credit",
+      "amount": 3.24,
+      "name": "Apple",
+      "description": "Card Number Used",
+      "date": "2023-10-22",
+      "isPending": false,
+      "authorizedUser": "Diana",
+      "icon": "apple"
+    },
+    {
+      "id": 4,
+      "type": "Payment",
+      "amount": 99.71,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2023-10-21",
+      "isPending": false,
+      "icon": "university"
+    },
+    {
+      "id": 5,
+      "type": "Payment",
+      "amount": 73.58,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank National Association",
+      "date": "2023-10-20",
+      "isPending": false,
+      "icon": "university"
+    },
+    {
+      "id": 6,
+      "type": "Credit",
+      "amount": 21.61,
+      "name": "IKEA",
+      "description": "Purchase in Round Rock, Tx",
+      "date": "2023-10-01",
+      "isPending": false,
+      "icon": "couch"
+    },
+    {
+      "id": 7,
+      "type": "Credit",
+      "amount": 7.5,
+      "name": "Airalo",
+      "description": "Digital Purchase",
+      "date": "2023-05-26",
+      "isPending": false,
+      "paymentMethod": "RBC Bank Debit Card",
+      "status": "Approved",
+      "icon": "wifi"
+    },
+    {
+      "id": 8,
+      "type": "Credit",
+      "amount": 42.99,
+      "name": "Target",
+      "description": "Retail Purchase",
+      "date": "2023-05-15",
+      "isPending": false,
+      "icon": "shopping-cart"
+    },
+    {
+      "id": 9,
+      "type": "Credit",
+      "amount": 18.35,
+      "name": "Starbucks",
+      "description": "Coffee Purchase",
+      "date": "2023-04-28",
+      "isPending": false,
+      "icon": "coffee"
+    },
+    {
+      "id": 10,
+      "type": "Payment",
+      "amount": 125.0,
+      "name": "Payment",
+      "description": "From Personal Account",
+      "date": "2023-04-20",
+      "isPending": false,
+      "icon": "money-bill"
+    }
+  ]
+}

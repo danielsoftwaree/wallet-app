@@ -1,0 +1,72 @@
+---
+description: 
+globs: **/*.ts, **/*.tsx, **/*.js, **/*.jsx
+alwaysApply: false
+---
+---
+description: Single Source of Truth & Docs – centralize configs, constants, types, document them, and always reuse
+---
+
+# Single Source of Truth & Documentation
+
+## Purpose
+Enforce a strict **single source of truth** for every reusable value or structure and pair it with living documentation. This keeps the code base DRY, clean, and maintainable.
+
+## When to Apply
+1. Adding or modifying any scalar value (string / number / boolean) that might appear in multiple files.  
+2. Creating or evolving a TypeScript type, interface, or data shape reused across modules.  
+3. Introducing configuration for environments, APIs, or features.  
+4. Building reusable utilities, hooks, or UI primitives.
+
+## Guidelines
+### 1. Re‑use before you re‑make
+- **Search first** for an existing constant, config, type, or doc that fits the need.  
+- If one exists, **import and use it**—never duplicate.
+
+### 2. If it doesn’t exist — establish it
+| Kind                          | Directory        | Example file name      |
+|-------------------------------|------------------|------------------------|
+| Primitive values / flags      | `src/constants/` | `feature-flags.ts`      |
+| Runtime / build configuration | `src/config/`    | `auth-config.ts`        |
+| Shared types / interfaces     | `src/types/`     | `user.ts`              |
+| Utilities & hooks             | `src/utils/`<br>`src/hooks/` | `format-date.ts` |
+
+1. **Export a named constant/type** with a descriptive identifier.  
+2. **Add JSDoc / TSDoc** explaining purpose, params, returns, and an example.  
+3. **Write / update Markdown docs** under `docs/` (or inline `@example`) so others understand usage.
+
+### 3. Use what you create
+- Import the new constant/type **everywhere** it’s needed; remove hard‑coded duplicates.  
+- Prefer **enum or literal unions** for finite sets of values.
+
+### 4. Keep documentation in sync
+- Any change to a constant, config, or type **must** include corresponding doc updates.  
+- Out‑of‑sync docs are treated as bugs.
+
+## Examples
+
+### Centralizing a “magic number”
+```ts
+// src/constants/timeout.ts
+/**
+ * Time (ms) before automatic logout due to inactivity.
+ */
+export const INACTIVITY_TIMEOUT_MS = 60_000;
+```
+```ts
+// src/features/auth/LogoutTimer.ts
+import { INACTIVITY_TIMEOUT_MS } from '~/constants/timeout';
+
+const startLogoutTimer = (): NodeJS.Timeout =>
+  setTimeout(handleLogout, INACTIVITY_TIMEOUT_MS);
+```
+
+```ts
+// src/hooks/useCurrentUser.ts
+import type { User } from '~/types/user';
+
+export const useCurrentUser = () => {
+  const { data } = useSWR<User>('/api/me');
+  return data;
+};
+```
