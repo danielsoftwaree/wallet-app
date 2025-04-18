@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import TransactionDetail from "@/components/TransactionDetail";
 import { useTransactionData } from "@/hooks/useTransactionData";
 import { Transaction } from "@/types";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ContentAnimator from "@/components/ContentAnimator";
 import Container from "@/components/Container";
