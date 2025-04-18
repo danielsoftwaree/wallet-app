@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { Transaction } from "@/types";
 import { formatCurrency, formatDate } from "@/utils/formatters";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
 import {
   faAppleAlt,
   faCoffee,

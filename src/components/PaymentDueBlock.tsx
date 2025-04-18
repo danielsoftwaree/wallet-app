@@ -10,7 +10,7 @@ const PaymentDueBlock: React.FC = () => {
       </div>
 
       <p className="text-xs text-[#727272] mt-2 leading-relaxed">
-        You've paid your September balance.
+        You&apos;ve paid your September balance.
       </p>
 
       <div className="flex-grow flex items-center justify-center mt-auto">

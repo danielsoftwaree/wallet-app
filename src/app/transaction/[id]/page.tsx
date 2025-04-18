@@ -64,7 +64,6 @@ export default function TransactionDetailPage({
   const { getTransactionById, loading, error } = useTransactionData();
   const [transaction, setTransaction] = useState<Transaction | null>(null);
   const [notFound, setNotFound] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     if (!loading) {
